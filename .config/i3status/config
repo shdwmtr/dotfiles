@@ -1,0 +1,20 @@
+# order += "cpu_temperature 0"
+# order += "cpu_usage"
+# order += "memory"
+order += "time"
+
+# cpu_usage {
+#     format = "CPU: %usage |"
+# }
+
+# memory {
+#     format = "RAM: %used/%total |"
+# }
+
+# cpu_temperature 0 {
+#     format = "TEMP: %degrees °C |"
+# }
+
+time {
+    format = "%l:%M %p"
+}
