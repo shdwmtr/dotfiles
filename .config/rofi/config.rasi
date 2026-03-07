@@ -2,7 +2,7 @@ configuration {
     drun-display-format: "{name}";
     display-drun: "";
     modi: "drun,run";
-    font: "Inter 10";
+    font: "GeistMono Nerd Font 9";
     show-icons: true;
     dpi: 144;
 }

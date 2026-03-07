@@ -1,8 +1,7 @@
 # set modified key to the Windows button
 set $mod Mod4
 
-# start picom
-exec --no-startup-id picom --config ~/.config/picom/picom.conf -bQ
+exec --no-startup-id xsetroot -solid "#222222"
 
 # remove window titles from no stacked/tabbed windows.
 for_window [class="^.*"] border pixel 2
@@ -11,11 +10,8 @@ for_window [class="^.*"] border pixel 2
 gaps inner 0
 gaps outer 0
 
-# remove border on windows that have exclusive control over a workspace
-smart_borders on
-
 # use the default monospace font, set in ~/.config/fontconfig/fonts.conf
-font pango:sans serif 10
+font pango:monospace 10
 
 # bind main to windows+shift+s
 bindsym $mod+Shift+s exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
@@ -121,12 +117,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Assign apps to workspaces
-assign [class="firefox-developer-edition"] $ws1
-assign [class="dev.zed.Zed"] $ws2
-assign [class="discord"] $ws3
-for_window [class="Spotify"] move to workspace $ws4
-title_align center
 set $focused    #777777
 set $unfocused  #373737
 set $black      #000000
