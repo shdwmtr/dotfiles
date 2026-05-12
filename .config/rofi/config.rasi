@@ -4,7 +4,7 @@ configuration {
     modi: "drun,run";
     font: "GeistMono Nerd Font 9";
     show-icons: true;
-    dpi: 144;
+    dpi: 192;
 }
 
 * {
