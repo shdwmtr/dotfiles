@@ -1,0 +1,216 @@
+@define-color fg #e6d8ba;
+@define-color bg #202020;
+@define-color bg_active #454545;
+
+@define-color fg_active #ffffff;
+@define-color fg_inverse #000000;
+
+@define-color accent #178b76;
+@define-color danger #a55555;
+
+@define-color warning #ff9b71;
+@define-color critical #f53c3c;
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 13px;
+    min-height: 20px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @fg;
+}
+
+#workspaces {
+    margin: 3px 5px 3px 0px;
+    background-color: @bg;
+    border-radius: 6px;
+}
+
+#workspaces button {
+    margin: 0;
+    padding: 0 2px;
+    background: transparent;
+    color: @fg;
+    transition: 0.15s ease-in-out;
+    border-radius: 4px;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: unset;
+    margin: unset;
+}
+
+#workspaces button.active {
+    background-color: @fg;
+    color: @fg_inverse;
+}
+
+#workspaces button.empty {
+    color: alpha(@fg, 0.4);
+    opacity: 0.85;
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button.empty.active {
+    background-color: @fg;
+    color: @fg_inverse;
+}
+
+#window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#mpris,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#power-profiles-daemon,
+#tray,
+#bluetooth,
+#backlight,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
+#custom-voxtype,
+#custom-voxtype.transcribing,
+#custom-voxtype.recording,
+#custom-update,
+#custom-updatespacman,
+#custom-screenrecording-indicator,
+#disk,
+#custom-notification {
+    padding: 0 8px;
+    color: @fg;
+    margin: 3px 4px 3px 0;
+    border-radius: 4px;
+}
+
+#tray,
+#window,
+#memory,
+#clock,
+#idle_inhibitor,
+#custom-update,
+#custom-updatespacman,
+#custom-voxtype,
+#custom-voxtype.recording,
+#battery,
+#backlight,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#cpu,
+#network,
+#bluetooth,
+#pulseaudio,
+#disk,
+#custom-notification {
+    background-color: @bg;
+}
+
+#custom-notification {}
+
+#mpris {
+    background-color: @fg;
+    color: @fg_inverse;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @fg;
+    background-color: @bg;
+}
+
+@keyframes blink {
+    to {
+        background-color: @fg;
+        color: @fg_inverse;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @critical;
+    color: @fg;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon.performance {
+    background-color: @warning;
+    color: @fg_inverse;
+}
+
+#network.disconnected {
+    background-color: @warning;
+    color: @fg_inverse;
+}
+
+#bluetooth.disabled {
+    background-color: @warning;
+    color: @fg_inverse;
+}
+
+#pulseaudio.muted {
+    background-color: @warning;
+    color: @fg_inverse;
+}
+
+#custom-voxtype {
+    min-width: 12px;
+    margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+    color: @danger;
+}
+
+#custom-notification-silencing-indicator {
+    min-width: 12px;
+    margin-left: 4px;
+    margin-right: 0;
+    padding-bottom: 0;
+}
+
+#custom-idle-indicator {
+    min-width: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+}
+
+#custom-notification-silencing-indicator.active,
+#custom-idle-indicator.active {
+    color: @danger;
+    background-color: @bg;
+}
+
+tooltip {
+    padding: 4px;
+    background: @bg;
+    border: 1px solid alpha(@fg, 0.8);
+    box-shadow: 1px 1px 3px 1px #131313;
+}
+
+tooltip label {
+    color: @fg;
+    font-weight: normal;
+}
+
+#idle_inhibitor {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: @fg;
+}
+
+#idle_inhibitor.activated {
+    color: @accent;
+    animation-name: blink-inhibitor;
+    animation-duration: 1s;
+}

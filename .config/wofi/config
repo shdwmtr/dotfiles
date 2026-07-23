@@ -1,0 +1,14 @@
+width=750
+height=502
+prompt=Type here to search...
+term=alacritty
+hide_scroll=true
+show=drun
+insensitive=true
+allow_markup=true
+allow_images=true
+image_size=16
+gtk_dark=true
+style=/home/shdw/.config/wofi/style.css
+no_actions=true
+close_on_focus_loss=true

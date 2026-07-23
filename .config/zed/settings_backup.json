@@ -1,0 +1,139 @@
+{
+  "diff_view_style": "unified",
+  "ssh_connections": [
+    {
+      "host": "marley",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/ubuntu"],
+        },
+      ],
+    },
+  ],
+  "buffer_line_height": "comfortable",
+  "cli_default_open_behavior": "new_window",
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent_buffer_font_size": 13.0,
+  "agent_ui_font_size": 15.0,
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+    },
+  },
+  "project_panel": {
+    "dock": "left",
+    "git_status": true,
+  },
+  "scrollbar": {
+    "git_diff": false,
+  },
+  "inline_code_actions": true,
+  "relative_line_numbers": "disabled",
+  "gutter": {
+    "runnables": true,
+    "breakpoints": true,
+    "folds": true,
+    "line_numbers": true,
+  },
+  "disable_ai": true,
+  "agent": {
+    "dock": "right",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+    },
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.5",
+    },
+    "model_parameters": [],
+  },
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "git_panel": {
+    "dock": "left",
+    "button": true,
+    "status_style": "icon",
+  },
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  "ui_font_features": {
+    "cv01": true,
+    "cv02": true,
+    "cv15": true,
+    "cv19": true,
+    "cv23": true,
+    "cv29": true,
+    "cv31": true,
+    "ss01": true,
+    "ss03": true,
+    "ss05": true,
+    "liga": true,
+    "calt": true,
+    "dlig": true,
+  },
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  // Ligatures check:
+  // -<< -< -<- <-- <--- <<- <- -> ->> --> ---> ->- >- >>-
+  // =<< =< =<= <== <=== <<= <= => =>> ==> ===> =>= >= >>=
+  // <-> <--> <---> <----> <=> <==> <===> <====> :: ::: __
+  // <~~ </ </> /> ~~> == != /= ~= <> === !== !=== =/= =!=
+  // <: := *= *+ <* <*> *> <| <|> |> <. <.> .> +* =* =: :>
+  // (* *) /* */ [| |] {| |} ++ +++ \/ /\ |- -| <!-- <!---
+  "buffer_font_features": {
+    "ss02": true,
+    "cv01": true,
+    "cv02": true,
+    "cv15": true,
+    "cv19": true,
+    "cv23": true,
+    "cv29": true,
+    "cv31": true,
+    "ss01": true,
+    "ss03": true,
+    "ss05": true,
+    "liga": true,
+    "calt": true,
+    "dlig": true,
+  },
+  "buffer_font_weight": 400.0,
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "never",
+  },
+  "file_types": {},
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true,
+  },
+  "ui_font_size": 15.0,
+  "buffer_font_size": 15.0,
+  "theme": {
+    "mode": "dark",
+    "light": "VSCode Dark Modern",
+    "dark": "VSCode Dark Modern",
+  },
+  "formatter": "language_server",
+  "format_on_save": "on",
+  "languages": {
+    "TSX": {
+      "formatter": "prettier",
+      "tab_size": 4
+    },
+    "TypeScript": {
+      "formatter": "prettier",
+      "tab_size": 4
+    },
+    "JavaScript": {
+      "formatter": "prettier",
+      "tab_size": 4
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "none"
+  }
+}
