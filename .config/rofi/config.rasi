@@ -2,9 +2,9 @@ configuration {
     drun-display-format: "{name}";
     display-drun: "";
     modi: "drun,run";
-    font: "GeistMono Nerd Font 9";
+    font: "monospace 11";
     show-icons: true;
-    dpi: 192;
+    dpi: 144;
 }
 
 * {
