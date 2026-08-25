@@ -3,15 +3,10 @@ hl.monitor({
     output   = "",
     mode     = "preferred",
     position = "auto",
-    scale    = "1.25",
+    scale    = "1.2",
 })
--- headless monitor setup
-hl.monitor({
-    output = "HEADLESS-2",
-    mode = "2560x1664@60",
-    position = "auto",
-    scale = "1.33",
-})
+-- headless monitor is configured dynamically by headless.sh at runtime,
+-- since Hyprland's auto-assigned name for it isn't stable across sessions
 -- mouse setup
 hl.device({
     name        = "epic-mouse-v1",

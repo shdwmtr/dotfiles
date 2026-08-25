@@ -1,19 +1,19 @@
 -- https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in          = 5,
-        gaps_out         = 10,
+        gaps_in          = 0,
+        gaps_out         = 0,
         border_size      = 2,
         resize_on_border = false,
         allow_tearing    = false,
         layout           = "dwindle",
         col              = {
-            active_border   = "rgba(e6d8baff)",
+            active_border   = "rgba(777777ff)",
             inactive_border = "rgba(595959aa)",
         },
     },
     decoration = {
-        rounding         = 4,
+        rounding         = 0,
         rounding_power   = 4,
         active_opacity   = 1.0,
         inactive_opacity = 1.0,
@@ -32,7 +32,7 @@ hl.config({
         },
     },
     animations = {
-        enabled = true,
+        enabled = false,
     },
     dwindle = {
         preserve_split = true, -- You probably want this

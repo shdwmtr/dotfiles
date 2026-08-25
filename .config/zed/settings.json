@@ -3,8 +3,8 @@
     "default_open_behavior": "new_window",
     "use_system_path_prompts": false,
     "use_system_prompts": true,
-    "format_on_save": "on",
-    "formatter": "language_server",
+    // "format_on_save": "on",
+    // "formatter": "language_server",
     "tab_bar": {
         "show_pinned_tabs_in_separate_row": false,
         "show": true,
@@ -27,7 +27,9 @@
     "agent_servers": {
         "claude-acp": {
             "favorite_config_option_values": {
-                "mode": ["bypassPermissions"],
+                "mode": [
+                    "bypassPermissions"
+                ],
             },
             "default_config_options": {
                 "mode": "bypassPermissions",
@@ -49,7 +51,9 @@
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/ubuntu"],
+                    "paths": [
+                        "/home/ubuntu"
+                    ],
                 },
             ],
         },
@@ -134,7 +138,7 @@
         "diagnostics": false,
         "metrics": false,
     },
-    "ui_font_size": 15.0,
+    "ui_font_size": 16.0,
     "buffer_font_size": 15.0,
     "theme": {
         "mode": "dark",
@@ -151,5 +155,5 @@
             "formatter": "language_server",
         },
     },
-    "tab_size": 4,
+    "tab_size": 4
 }

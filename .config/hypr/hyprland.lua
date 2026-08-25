@@ -25,13 +25,7 @@ local daemon_cmnds = {
     "hyprctl setcursor Adwaita 24",
     -- set scaling and other resources for xwayland apps.
     "xrdb -merge ~/.Xresources",
-
-    "hyprpaper",
     "sunshine",
-
-    -- hard to give waybar a proper output, so just restart it if it dies
-    -- (it dies if the display disappears or doesn't exist)
-    "while true; do waybar; sleep 0.5; done"
 }
 
 autorun.on_hyprland_start(function()

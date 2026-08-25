@@ -26,7 +26,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 floating_modifier $mod
-tiling_drag modifier titlebar
+tiling_drag modifier
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
@@ -148,6 +148,6 @@ bar {
         focused_workspace  $background   $white       #000000
         active_workspace   $background   $white       #000000
         inactive_workspace $background   $background  $white
-        urgent_workspace   $background   $red         $crust
+        urgent_workspace   $background   $warning     $black
     }
 }

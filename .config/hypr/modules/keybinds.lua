@@ -1,7 +1,8 @@
 -- https://wiki.hypr.land/Configuring/Basics/Binds
 local terminal          = "kitty"
-local fileManager       = "pcmanfm"
+local fileManager       = "cargo run --manifest-path ~/Development/zex/Cargo.toml"
 local menu              = "pkill wofi || wofi --show drun"
+local color_picker      = "wl-copy $(hyprpicker)"
 local mainMod           = "SUPER"
 
 local shutdown_cmd      = "hyprshutdown"
@@ -18,7 +19,7 @@ local audio_pause_play  = "playerctl play-pause"
 local audio_prev        = "playerctl previous"
 
 local monospace_font    = "$(fc-match --format='%{family}' monospace)"
-local screenshot_cmd    = 'grim -g "$(slurp -d -b "#0C0C0C75" -c "#fff" -F ' .. monospace_font .. ')" - | wl-copy'
+local screenshot_cmd    = "still -c 'grim -g \"$(slurp -d -b \"#0C0C0C75\" -c \"#fff\" -F " .. monospace_font .. ")\" - | wl-copy'"
 
 function kb(...)
 	return table.concat({ ... }, " + ")
@@ -31,6 +32,7 @@ hl.bind(kb(mainMod, "SHIFT", "E"), hl.dsp.exec_cmd(shutdown_cmd))
 hl.bind(kb(mainMod, "E"), hl.dsp.exec_cmd(fileManager))
 hl.bind(kb(mainMod, "V"), hl.dsp.window.float({ action = "toggle" }))
 hl.bind(kb(mainMod, "D"), hl.dsp.exec_cmd(menu))
+hl.bind(kb(mainMod, "C"), hl.dsp.exec_cmd(color_picker))
 hl.bind(kb(mainMod, "P"), hl.dsp.window.pseudo())
 hl.bind(kb(mainMod, "J"), hl.dsp.layout("togglesplit")) -- dwindle only
 

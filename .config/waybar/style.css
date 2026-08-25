@@ -14,27 +14,24 @@
 * {
     font-family: "JetBrainsMono Nerd Font Propo";
     font-size: 13px;
-    min-height: 20px;
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: @bg;
     color: @fg;
 }
 
 #workspaces {
-    margin: 3px 5px 3px 0px;
     background-color: @bg;
-    border-radius: 6px;
+    border-radius: 0px;
 }
 
 #workspaces button {
-    margin: 0;
-    padding: 0 2px;
+    padding: 0 3px;
     background: transparent;
     color: @fg;
     transition: 0.15s ease-in-out;
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 #workspaces button:hover {
@@ -85,8 +82,18 @@ window#waybar {
 #custom-notification {
     padding: 0 8px;
     color: @fg;
-    margin: 3px 4px 3px 0;
-    border-radius: 4px;
+    margin: 0px 0px 0px 3px;
+    border-radius: 0px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-notification {
+    border-left: 2px solid #303030;
 }
 
 #tray,
