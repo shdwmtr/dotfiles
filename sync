@@ -2,6 +2,5 @@
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-PACKAGES=(dunst fontconfig gtk hypr i3 i3status kitty misc waybar wofi zed)
-
-stow -v -R -t "$HOME" "${PACKAGES[@]}" "$@"
+stow -v -R -t "$HOME/.config" "$@" config
+stow -v -R -t "$HOME" "$@" home
