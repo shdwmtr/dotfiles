@@ -32,6 +32,7 @@ window#waybar {
     color: @fg;
     transition: 0.15s ease-in-out;
     border-radius: 0px;
+    transition: none;
 }
 
 #workspaces button:hover {
@@ -57,7 +58,10 @@ window#waybar {
     color: @fg_inverse;
 }
 
-#window,
+#window {
+    padding-left: 10px;
+}
+
 #clock,
 #battery,
 #cpu,
@@ -70,30 +74,10 @@ window#waybar {
 #tray,
 #bluetooth,
 #backlight,
-#custom-idle-indicator,
-#custom-notification-silencing-indicator,
-#custom-voxtype,
-#custom-voxtype.transcribing,
-#custom-voxtype.recording,
-#custom-update,
-#custom-updatespacman,
-#custom-screenrecording-indicator,
 #disk,
 #custom-notification {
-    padding: 0 8px;
+    padding: 0 10px;
     color: @fg;
-    margin: 0px 0px 0px 3px;
-    border-radius: 0px;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#network,
-#pulseaudio,
-#custom-notification {
-    border-left: 2px solid #303030;
 }
 
 #tray,
@@ -101,10 +85,6 @@ window#waybar {
 #memory,
 #clock,
 #idle_inhibitor,
-#custom-update,
-#custom-updatespacman,
-#custom-voxtype,
-#custom-voxtype.recording,
 #battery,
 #backlight,
 #power-profiles-daemon.balanced,
@@ -117,8 +97,6 @@ window#waybar {
 #custom-notification {
     background-color: @bg;
 }
-
-#custom-notification {}
 
 #mpris {
     background-color: @fg;
@@ -168,35 +146,6 @@ window#waybar {
     color: @fg_inverse;
 }
 
-#custom-voxtype {
-    min-width: 12px;
-    margin: 0 0 0 7.5px;
-}
-
-#custom-voxtype.recording {
-    color: @danger;
-}
-
-#custom-notification-silencing-indicator {
-    min-width: 12px;
-    margin-left: 4px;
-    margin-right: 0;
-    padding-bottom: 0;
-}
-
-#custom-idle-indicator {
-    min-width: 12px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-bottom: 0;
-}
-
-#custom-notification-silencing-indicator.active,
-#custom-idle-indicator.active {
-    color: @danger;
-    background-color: @bg;
-}
-
 tooltip {
     padding: 4px;
     background: @bg;
@@ -207,17 +156,4 @@ tooltip {
 tooltip label {
     color: @fg;
     font-weight: normal;
-}
-
-#idle_inhibitor {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    color: @fg;
-}
-
-#idle_inhibitor.activated {
-    color: @accent;
-    animation-name: blink-inhibitor;
-    animation-duration: 1s;
 }
