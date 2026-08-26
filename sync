@@ -3,4 +3,3 @@ set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 stow -v -R -t "$HOME/.config" "$@" config
-stow -v -R -t "$HOME" "$@" home
