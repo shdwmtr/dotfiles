@@ -1,0 +1,23 @@
+System:
+  Kernel: 7.1.9-arch1-2 arch: x86_64 bits: 64 compiler: gcc v: 16.2.1
+  Desktop: Hyprland v: 0.56.2 Distro: Arch Linux
+
+CPU:
+  Info: 24-core (8-mt/16-st) model: Intel Core i9-14900KF bits: 64
+    type: MST AMCP arch: Raptor Lake rev: 1 cache: L1: 2.1 MiB L2: 32 MiB
+    L3: 36 MiB
+  Speed (MHz): avg: 971 min/max: 800/5700:6000:4400 cores: 1: 971 2: 971
+    3: 971 4: 971 5: 971 6: 971 7: 971 8: 971 9: 971 10: 971 11: 971 12: 971
+    13: 971 14: 971 15: 971 16: 971 17: 971 18: 971 19: 971 20: 971 21: 971
+    22: 971 23: 971 24: 971 25: 971 26: 971 27: 971 28: 971 29: 971 30: 971
+    31: 971 32: 971 bogomips: 203980
+  Flags-basic: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 vmx
+
+Graphics:
+  Device-1: NVIDIA AD103 [GeForce RTX 4080 SUPER] vendor: Lenovo
+    driver: nvidia v: 610.57.04 arch: Lovelace bus-ID: 01:00.0
+  Display: wayland server: X.org v: 1.21.1.24 with: Xwayland v: 24.1.13
+    compositor: Hyprland v: 0.56.2 driver: X: loaded: nvidia
+    unloaded: modesetting gpu: nv_platform,nvidia,nvidia-nvswitch
+    resolution: 3840x2160~240Hz
+  API: Vulkan v: 1.4.357 drivers: nvidia surfaces: N/A devices: 1
