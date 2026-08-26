@@ -1,0 +1,24 @@
+font=JetBrainsMono Nerd Font Propo 11
+
+background-color=#202020F2
+text-color=#e6d8ba
+border-color=#454545
+border-size=2
+border-radius=0
+padding=20
+margin=10
+width=320
+height=110
+default-timeout=5000
+icons=1
+max-icon-size=48
+
+progress-color=over #178b76FF
+
+[urgency=low]
+border-color=#454545
+
+[urgency=critical]
+border-color=#f53c3c
+text-color=#ffffff
+default-timeout=0
