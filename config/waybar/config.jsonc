@@ -172,8 +172,7 @@
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
-		"on-click": "omarchy-launch-or-focus-tui wiremix",
-		"on-click-right": "pamixer -t",
+		"on-click": "pwvucontrol -t 1",
 		"tooltip-format": "Playing at {volume}%",
 		"scroll-step": 5,
 		"format-muted": "",
