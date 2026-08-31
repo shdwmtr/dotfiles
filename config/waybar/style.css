@@ -17,12 +17,11 @@
 }
 
 window#waybar {
-    background-color: @bg;
+    background-color: rgba(20, 20, 20, 0.5);
     color: @fg;
 }
 
 #workspaces {
-    background-color: @bg;
     border-radius: 0px;
 }
 
@@ -80,24 +79,6 @@ window#waybar {
     color: @fg;
 }
 
-#tray,
-#window,
-#memory,
-#clock,
-#idle_inhibitor,
-#battery,
-#backlight,
-#power-profiles-daemon.balanced,
-#power-profiles-daemon.power-saver,
-#cpu,
-#network,
-#bluetooth,
-#pulseaudio,
-#disk,
-#custom-notification {
-    background-color: @bg;
-}
-
 #mpris {
     background-color: @fg;
     color: @fg_inverse;
@@ -106,7 +87,6 @@ window#waybar {
 #battery.charging,
 #battery.plugged {
     color: @fg;
-    background-color: @bg;
 }
 
 @keyframes blink {

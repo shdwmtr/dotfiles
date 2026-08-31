@@ -21,12 +21,13 @@ hl.window_rule({
 
 -- windows rendered with blur effect
 hl.layer_rule({ name = "wofi-blur", match = { namespace = "wofi" }, blur = true, })
+hl.layer_rule({ name = "waybar-blur", match = { namespace = "waybar" }, blur = true, })
 
 -- hint to hyprland the target workspace to start apps
 hl.window_rule({ match = { class = "brave-browser" }, workspace = "1 silent", })
-hl.window_rule({ match = { class = "dev.zed.Zed" }, workspace = "2 silent", })
-hl.window_rule({ match = { class = "spotify" }, workspace = "special:magic silent" })
-hl.window_rule({ match = { class = "discord" }, workspace = "special:magic silent", })
+-- hl.window_rule({ match = { class = "dev.zed.Zed" }, workspace = "2 silent", })
+hl.window_rule({ match = { class = "spotify" }, workspace = "11 silent" })
+hl.window_rule({ match = { class = "discord" }, workspace = "11 silent", })
 hl.window_rule({ match = { class = "steam" }, workspace = "6 silent", })
 
 -- globally suppress maximize events, they should always be ignored

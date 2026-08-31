@@ -47,8 +47,17 @@ for i = 1, 10 do
 	hl.bind(kb(mainMod, "SHIFT", key), hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind(kb(mainMod, "S"), hl.dsp.workspace.toggle_special("magic"))
-hl.bind(kb(mainMod, "SHIFT", "Z"), hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(kb(mainMod, "S"), function()
+	local active_mon = hl.get_active_monitor()
+	if not active_mon or active_mon.name ~= "HDMI-A-1" then
+		hl.dispatch(hl.dsp.focus({ monitor = "HDMI-A-1" }))
+	else
+	    hl.dispatch(hl.dsp.focus({ monitor = "DP-2" }))
+	end
+end)
+
+hl.bind(kb(mainMod, "GRAVE"), hl.dsp.focus({ monitor = "HDMI-A-1" }))
+hl.bind(kb(mainMod, "SHIFT", "GRAVE"), hl.dsp.window.move({ monitor = "HDMI-A-1" }))
 hl.bind(kb(mainMod, "SHIFT", "S"), hl.dsp.exec_cmd(screenshot_cmd))
 
 hl.bind(kb(mainMod, "mouse_down"), hl.dsp.focus({ workspace = "e+1" }))
