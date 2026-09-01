@@ -1,5 +1,6 @@
 local M = {}
-M.main_monitor_scale = "1.5"
+M.main_monitor_scale = "1.67"
+M.main_monitor_dpi = tonumber(M.main_monitor_scale) * 96
 
 hl.monitor({
     output   = "DP-2",
@@ -13,8 +14,7 @@ hl.monitor({
     mode     = "1920x1080@200.00000",
     position = "auto-left",
     transform = 1,
-    scale    = "1",
-
+    scale    = "1"
 })
 
 hl.device({

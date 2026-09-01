@@ -21,18 +21,23 @@ local startup_apps = {
     { cmd = "brave",                          workspace = "1 silent" },
     { cmd = "discord",                        workspace = "11 silent" },
     { cmd = "flatpak run com.spotify.Client", workspace = "11 silent" },
-    -- { cmd = "zeditor",                        workspace = "2 silent" }
 }
 
 local daemon_cmnds = {
     -- fix cursor scaling for xwayland applications
     "hyprctl setcursor Adwaita 24",
-    -- set scaling and other resources for xwayland apps.
-    "xrdb -merge ~/.Xresources",
+
+    -- run sunshine
     "sunshine",
-    "wallpiperd > /tmp/wallpiper-host.log"
+
+    -- run Wallpaper Engine
+    "wallpiperd > /tmp/wallpiper-host.log",
+
+    -- apply dpi to x11 for xwayland scaling
+    string.format([[xrdb -merge <<< "Xft.dpi: %.1f"]], devices.main_monitor_dpi)
 }
 
+-- force all windows on my HDMI-monitor into be pancakes,
 hl.layout.register("pancake", {
     recalculate = function(ctx)
         local n = #ctx.targets
